@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserLoginTest < ActionDispatch::IntegrationTest
    test "registered user can login" do
-    user = User.create(username: "Sam", password: "password")
+   user = User.create(username: "Sam", password: "password")
 
     visit login_path
     fill_in "Username", with: user.username
